@@ -1,0 +1,349 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Fontes/MANDATOR.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Gerenciamento.gd" type="Script" id=2]
+[ext_resource path="res://Imagens/2.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=8]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=15]
+font_path = "res://Fontes/Designer.otf"
+
+[sub_resource type="DynamicFont" id=16]
+size = 180
+font_data = SubResource( 15 )
+
+[sub_resource type="DynamicFontData" id=26]
+font_path = "res://Fontes/NewakeFont-Demo.otf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 75
+font_data = SubResource( 26 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 65
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 70
+extra_spacing_top = -18
+extra_spacing_bottom = -13
+extra_spacing_char = -5
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 90
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fontes/NewakeFont-Demo.otf"
+
+[sub_resource type="DynamicFont" id=25]
+size = 40
+font_data = SubResource( 5 )
+
+[node name="Gerenciamento" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+
+[node name="pass" type="Button" parent="."]
+margin_left = 1461.0
+margin_top = 333.0
+margin_right = 1833.0
+margin_bottom = 469.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.752941, 0.917647, 1, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+text = "Editar"
+
+[node name="Labelpaciente" type="Label" parent="."]
+margin_left = 76.0
+margin_top = 334.0
+margin_right = 1454.0
+margin_bottom = 464.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 23 )
+
+[node name="LabelPac" type="Label" parent="."]
+margin_left = 75.0
+margin_top = 52.0
+margin_right = 1739.0
+margin_bottom = 224.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Editar Agenda"
+
+[node name="ButtonBack" type="Button" parent="."]
+margin_left = 1546.0
+margin_top = 975.0
+margin_right = 1855.0
+margin_bottom = 1054.0
+focus_mode = 0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 14 )
+enabled_focus_mode = 0
+text = "Voltar"
+flat = true
+
+[node name="window" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="window"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -711.5
+margin_top = -449.5
+margin_right = 711.5
+margin_bottom = 449.5
+color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="window"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -686.5
+margin_top = -424.5
+margin_right = 686.5
+margin_bottom = 424.5
+
+[node name="LabelNome" type="Label" parent="window/ColorRect2"]
+margin_left = 285.0
+margin_top = -4.0
+margin_right = 1369.0
+margin_bottom = 88.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 12 )
+
+[node name="LabelUser" type="Label" parent="window/ColorRect2"]
+margin_left = 3.0
+margin_top = -5.0
+margin_right = 282.0
+margin_bottom = 113.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Paciente:"
+
+[node name="LabelUser2" type="Label" parent="window/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -304.0
+margin_top = 24.0
+margin_right = 304.0
+margin_bottom = 116.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Informe uma dosagem"
+
+[node name="LabelRoom" type="Label" parent="window/ColorRect2"]
+margin_left = 3.0
+margin_top = 69.0
+margin_right = 166.0
+margin_bottom = 187.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Sala:"
+
+[node name="LabelSala" type="Label" parent="window/ColorRect2"]
+margin_left = 170.5
+margin_top = 67.5
+margin_right = 1322.5
+margin_bottom = 159.5
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 12 )
+
+[node name="GavA" type="OptionButton" parent="window/ColorRect2"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 35.0
+margin_top = -96.5
+margin_right = 310.0
+margin_bottom = -10.5
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+text = "Gaveta A"
+
+[node name="GavB" type="OptionButton" parent="window/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -137.5
+margin_top = -96.5
+margin_right = 137.5
+margin_bottom = -10.5
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+text = "Gaveta B"
+
+[node name="GavC" type="OptionButton" parent="window/ColorRect2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -310.0
+margin_top = -96.5
+margin_right = -35.0
+margin_bottom = -10.5
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+text = "Gaveta C"
+
+[node name="LineEditHora" type="LineEdit" parent="window/ColorRect2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -207.5
+margin_top = 259.0
+margin_right = 8.5
+margin_bottom = 320.0
+rect_scale = Vector2( 0.921104, 1.00623 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 28 )
+custom_styles/read_only = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/normal = SubResource( 22 )
+text = "00"
+align = 1
+caret_blink = true
+
+[node name="LineEditMin" type="LineEdit" parent="window/ColorRect2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 26.5
+margin_top = 259.0
+margin_right = 242.5
+margin_bottom = 320.0
+rect_scale = Vector2( 0.921104, 1.00623 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 28 )
+custom_styles/read_only = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/normal = SubResource( 22 )
+text = "00"
+align = 1
+caret_blink = true
+
+[node name="LineDose" type="LineEdit" parent="window/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -348.0
+margin_top = 123.5
+margin_right = 388.0
+margin_bottom = 228.5
+rect_scale = Vector2( 0.921104, 1.00623 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/read_only = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/normal = SubResource( 22 )
+align = 1
+caret_blink = true
+
+[node name="ButtonBack2" type="Button" parent="window/ColorRect2"]
+margin_left = 1051.5
+margin_top = 759.5
+margin_right = 1360.5
+margin_bottom = 838.5
+focus_mode = 0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 14 )
+enabled_focus_mode = 0
+text = "Voltar"
+flat = true
+
+[node name="Confirmar" type="Button" parent="window/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -169.0
+margin_top = 276.5
+margin_right = 169.0
+margin_bottom = 381.5
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.752941, 0.917647, 1, 1 )
+custom_fonts/font = SubResource( 24 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+text = "Confirmar"
+
+[node name="Label" type="Label" parent="window/ColorRect2"]
+margin_left = 683.0
+margin_top = 205.0
+margin_right = 708.0
+margin_bottom = 335.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 29 )
+text = ":"
+
+[node name="LabelPP" type="Label" parent="."]
+margin_left = 1678.0
+margin_top = 39.0
+margin_right = 1876.0
+margin_bottom = 78.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 25 )
+text = "Pill  Prompt"
+
+[connection signal="pressed" from="pass" to="." method="_on_pass_pressed"]
+[connection signal="pressed" from="ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="pressed" from="window/ColorRect2/ButtonBack2" to="." method="_on_ButtonBack2_pressed"]
+[connection signal="pressed" from="window/ColorRect2/Confirmar" to="." method="_on_Confirmar_pressed"]

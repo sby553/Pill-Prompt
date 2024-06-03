@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Imagens/3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/ScriptGerenciar.gd" type="Script" id=2]
+[ext_resource path="res://Fontes/Designer.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Fontes/MANDATOR.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=14]
+size = 180
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Fontes/NewakeFont-Demo.otf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 75
+font_data = SubResource( 12 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://Fontes/NewakeFont-Demo.otf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = SubResource( 13 )
+
+[sub_resource type="Theme" id=11]
+
+[sub_resource type="DynamicFont" id=15]
+size = 110
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="FundoGerenciar" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="LabelGer" type="Label" parent="."]
+margin_left = 61.0
+margin_top = 122.0
+margin_right = 1186.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Gerenciar"
+
+[node name="ButtonBack" type="Button" parent="."]
+margin_left = 1546.0
+margin_top = 975.0
+margin_right = 1855.0
+margin_bottom = 1054.0
+focus_mode = 0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 5 )
+enabled_focus_mode = 0
+text = "Voltar"
+flat = true
+
+[node name="LabelPP" type="Label" parent="."]
+margin_left = 1678.0
+margin_top = 39.0
+margin_right = 1876.0
+margin_bottom = 78.0
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Pill  Prompt"
+
+[node name="ButtonAdd" type="Button" parent="."]
+margin_left = 95.0
+margin_top = 458.0
+margin_right = 773.0
+margin_bottom = 607.0
+focus_mode = 0
+theme = SubResource( 11 )
+custom_colors/font_color_disabled = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_colors/font_color_hover = Color( 0.752941, 0.917647, 1, 1 )
+custom_fonts/font = SubResource( 15 )
+enabled_focus_mode = 0
+text = "Adicionar "
+flat = true
+
+[node name="ButtonEdit" type="Button" parent="."]
+margin_left = 86.0
+margin_top = 725.0
+margin_right = 764.0
+margin_bottom = 874.0
+focus_mode = 0
+theme = SubResource( 11 )
+custom_colors/font_color_disabled = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_colors/font_color = Color( 0.0784314, 0.188235, 0.317647, 1 )
+custom_colors/font_color_hover = Color( 0.752941, 0.917647, 1, 1 )
+custom_fonts/font = SubResource( 15 )
+enabled_focus_mode = 0
+text = "Editar"
+flat = true
+
+[connection signal="pressed" from="ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="pressed" from="ButtonAdd" to="." method="_on_ButtonAdd_pressed"]
+[connection signal="pressed" from="ButtonEdit" to="." method="_on_ButtonEdit_pressed"]
